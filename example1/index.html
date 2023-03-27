@@ -33,7 +33,7 @@
     </div>
     <div class="container">
         <div class="loader">
-            loading
+            <h2>Crochets By Lulu</h2>
         </div>
         <div class="overlay">
             <div class="block block1"></div>
@@ -66,6 +66,38 @@
         ease: Power1.easeIn,
         delay: 2,
     }, 0.04);
-    TweenMax.to("loader")
+    
+    TweenMax.to(".loader", 1, {
+        x: 2,
+        opacity: 0,
+        ease: Expo.easeInOut,
+        delay: 1.5
+    })
+
+    TweenMax.staggerFrom('.nav > a, .about p, .subheader > a', 2, {
+        ease: Expo.easeInOut,
+        opacity: 0,
+        y: 30,
+        delay: 3,
+    })
+
+    TweenMax.to('.box', 0.2, {
+        opacity: 1,
+        ease: Expo.easeInOut,
+        delay: 3.8,
+    })
+    
+    TweenMax.to('.image', 0.2, {
+        opacity: 1,
+        ease: Expo.easeInOut,
+        delay: 4,
+    })
+    
+        TweenMax.to('.box', 2.4, {
+            y: '-100%',
+            ease: Expo.easeInOut,
+            delay: 4,
+        })
+
 </script>
 </html>
